@@ -1,0 +1,211 @@
+@font-face {
+  font-family: "helveticaneuelight";
+  src: url("../fonts/HelveticaNeueLight.otf");
+  font-variation-settings: "srff" 0, "ital" 0, "wght" 50;
+}
+
+@font-face {
+  font-family: "serifbabe";
+  src: url("../fonts/Serifbabe\ Regular.otf");
+}
+
+/* Reset CSS */
+
+html, body {
+  background: #fff;
+  z-index: 1;
+  font-size: 1vw;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth; 
+  font-family: "helveticaneuelight";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
+  /*overflow-x: hidden; */
+}
+
+a, button, input, label {
+  cursor: pointer
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Your CSS */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+
+
+h1 a {
+  text-align: center;
+  position: absolute;
+  top: 43%;
+  left:41%;
+  font-size: 1.8vw;
+  z-index: 1;
+  color: #000000; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.grid-item a {
+  color:#000000;
+ /* text-decoration: none; */
+}
+
+.gedicht {
+  text-align: center;
+  position: relative;
+  font-size: 2.4vw;
+}
+
+#section3 .gedicht {
+  top: 7%;
+}
+
+#section4 .gedicht {
+  top: 4%;
+}
+
+#section5 .gedicht {
+  top: 15%;
+}
+
+.autor {
+  text-align: center;
+  position: relative;
+  font-size: 2.4vw;
+  font-family: "serifbabe";
+}
+
+#section3 .autor {
+  top: 52%;
+}
+
+#section4 .autor {
+  top: 22%;
+}
+
+#section5 .autor {
+  top: 50%;
+}
+
+#backgroundgif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/titelgif.gif') center center; /* URL of the GIF */
+  background-size: cover; /* Cover the entire screen */
+}
+
+
+#section1 {
+  position: relative;
+  height: 100vh; /* Set the height to cover the whole viewport */
+}
+
+#section2 {
+ /* display: none;*/ /* Initially hide section2 */
+  cursor: none;
+  height: 100vh; /* Set the height to cover the whole viewport */
+}
+
+#section3 {
+ /* display: none; /* Initially hide section2 */
+  height: 100vh; /* Set the height to cover the whole viewport */
+  margin-top: 100px;
+}
+
+#section4 {
+  /* display: none; /* Initially hide section2 */
+   height: 100vh; /* Set the height to cover the whole viewport */
+ }
+
+
+ #section5 {
+  /* display: none; /* Initially hide section2 */
+   height: 100vh; /* Set the height to cover the whole viewport */
+ }
+
+ .transitionsection {
+  height: 200px;
+ }
+
+ #gif1 {
+  background: url('../img/gif1.gif') no-repeat center center; /* URL of the GIF */
+  margin-left: 32%;
+  margin-top: 10%;
+  transform: rotate(-10deg); /* Adjust rotation angle as needed */
+  width: 30%; /* Adjust width as needed */
+  background-size: contain; /* Scale the background image to fit within the container without stretching */
+ }
+
+ #gif2 {
+  background: url('../img/gif2.gif') no-repeat center center; /* URL of the GIF */
+  margin-left: 60%;
+  width: 25%; /* Adjust width as needed */
+  background-size: contain; /* Scale the background image to fit within the container without stretching */
+ }
+
+#section2:target {
+  display: block; /* Display section2 when it's targeted */
+}
+
+#section3:target {
+  display: block; /* Display section2 when it's targeted */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); /* Eight columns */
+  grid-template-rows: repeat(7, 1fr); /* Six rows */
+  gap: 65px 20px; /* Gap between grid items */
+  padding: 25px; /* Space around the grid */
+  font-size: 1.5vw;
+}
+
+.grid-item {
+  opacity: 0; /* Initially set to fully transparent */
+  transition: opacity 0.65s; /* Add transition for smooth effect */
+  z-index: 5;
+}
+.grid-item.visible {
+  opacity: 1; /* Make the item fully visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width:500px){
+  .box{
+    background: blue;
+  }
+}
